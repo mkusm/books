@@ -1,4 +1,4 @@
-#include "ex_7_12.h"
+#include "ex_07_12_Sales_data.h"
 #include <fstream>
 
 int main(int argc, char *argv[])
