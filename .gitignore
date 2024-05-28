@@ -30,3 +30,10 @@
 # Executable files without extension in learn-c-the-hard-way directory
 learn-c-the-hard-way/*
 !learn-c-the-hard-way/*.*
+
+# Jupyter Notebook
+*.ipynb
+*.ipynb_checkpoints
+
+# vim session files
+*s.vim
