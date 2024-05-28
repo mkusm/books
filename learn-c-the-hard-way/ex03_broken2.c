@@ -2,7 +2,7 @@
 
 int main()
 {
-    int age;
+    int age;  // uninitialized on purpose
     int height = 72;
 
     printf("I am %d years old.\n", age);
