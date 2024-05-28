@@ -5,6 +5,7 @@
 // forward declarations
 int can_print_it(char ch);
 void print_letters(char arg[], int);
+void print_digits(char arg[], int);
 
 void print_arguments(int argc, char *argv[])
 {
@@ -13,7 +14,9 @@ void print_arguments(int argc, char *argv[])
 	for (i = 0; i < argc; i++) {
 		int len = strlen(argv[i]);
 		print_letters(argv[i], len);
+		print_digits(argv[i], len);
 	}
+	printf("\n");
 }
 
 void print_letters(char arg[], int len)
@@ -24,11 +27,22 @@ void print_letters(char arg[], int len)
 		char ch = arg[i];
 
 		if (isalpha(ch) || isblank(ch)) {
-			printf("'%c' == %d ", ch, ch);
+			printf("letters and blanks: '%c' == %d \n", ch, ch);
 		}
 	}
+}
 
-	printf("\n");
+void print_digits(char arg[], int len)
+{
+	int i = 0;
+
+	for (i = 0; i < len; i++) {
+		char ch = arg[i];
+
+		if (isdigit(ch) || ispunct(ch)) {
+			printf("digits and other:   '%c' == %d \n", ch, ch);
+		}
+	}
 }
 
 int main(int argc, char *argv[])
