@@ -9,9 +9,7 @@ void print_digits(char arg[], int);
 
 void print_arguments(int argc, char *argv[])
 {
-	int i = 0;
-
-	for (i = 0; i < argc; i++) {
+	for (int i = 0; i < argc; i++) {
 		int len = strlen(argv[i]);
 		print_letters(argv[i], len);
 		print_digits(argv[i], len);
@@ -21,9 +19,7 @@ void print_arguments(int argc, char *argv[])
 
 void print_letters(char arg[], int len)
 {
-	int i = 0;
-
-	for (i = 0; i < len; i++) {
+	for (int i = 0; i < len; i++) {
 		char ch = arg[i];
 
 		if (isalpha(ch) || isblank(ch)) {
@@ -34,9 +30,7 @@ void print_letters(char arg[], int len)
 
 void print_digits(char arg[], int len)
 {
-	int i = 0;
-
-	for (i = 0; i < len; i++) {
+	for (int i = 0; i < len; i++) {
 		char ch = arg[i];
 
 		if (isdigit(ch) || ispunct(ch)) {
